@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.thomas.jpa2020;
+package fr.thomas;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author bulleux
  */
 @Entity
+@Table(name = "articleAVendre")
 public class Article implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,15 +35,11 @@ public class Article implements Serializable {
         this.stock = stock;
     }
     
-    
-
     public Article(long id, String description, int stock) {
         this.id = id;
         this.description = description;
         this.stock = stock;
     }
-    
-    
 
     public long getId() {
         return id;
